@@ -1,0 +1,339 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin:0;
+font-family:sans-serif;
+color:white;
+
+background:#140028;
+
+background-image:
+radial-gradient(circle at 20% 30%,#7b2cff,transparent),
+radial-gradient(circle at 80% 70%,#a64cff,transparent);
+text-align:center;
+
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #333;
+  color: white;
+  position: relative;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ff9800;
+}
+
+/* ハンバーガー */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 2px;
+  transition: all 0.4s;
+}
+
+/* ハンバーガーを×に変形 */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.card{
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(10px);
+padding:20px;
+margin:20px auto;
+max-width:800px;
+border-radius:10px;
+text-align:left;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* 箇条書きリスト全体の調整 */
+.card ul {
+    /* 左側の余白を広げて全体を右に寄せる */
+    padding-left: 2.5rem; 
+    /* 上下の余白も整えてスッキリさせる */
+    margin: 15px 0;
+    /* リストのポッチ（・）を内側に入れる場合 */
+    list-style-position: outside; 
+}
+
+/* 各リスト項目の調整 */
+.card li {
+    /* 項目ごとの行間を広げる */
+    margin-bottom: 10px;
+    line-height: 1.6;
+    /* テキストの色やサイズを微調整する場合 */
+    color: #white; 
+}
+
+/* リンク付きリスト（Programs）のホバー演出（おまけ） */
+.card ul li a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.card ul li a:hover {
+    padding-left: 5px; /* ホバー時に少し右に動く */
+    color: #0056b3;
+}
+
+.sns a{
+color:white;
+font-size:30px;
+margin:10px;
+}
+
+.back-to-top{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#6a00ff;
+color:white;
+padding:10px 15px;
+border-radius:50%;
+text-decoration:none;
+}
+
+.logo{
+
+font-weight:bold;
+font-size:18px;
+
+}
+
+h2{
+text-align:left;
+max-width:800px;
+margin:40px auto 10px;
+border-left:5px solid #6a00ff;
+padding-left:10px;
+}
+
+.avatar{
+
+width:140px;
+border-radius:50%;
+
+border:4px solid #c084ff;
+
+box-shadow:0 0 25px #c084ff;
+
+}
+
+.fade{
+opacity:0;
+transform:translateY(40px);
+transition:1s;
+}
+
+.fade.show{
+opacity:1;
+transform:translateY(0);
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background: #333;
+}
+
+.back-to-top::before {
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  width: 10px;
+  height: 10px;
+  border-top: 3px solid white;
+  border-left: 3px solid white;
+  transform: rotate(45deg);
+}
+
+footer{
+margin:40px;
+}
+
+a{
+color:white;
+text-decoration:none;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+        z-index: 100; /* メニューより上に配置 */
+    }
+
+    .nav-links {
+        display: flex; /* noneではなくflexにして位置で制御 */
+        flex-direction: column;
+        position: fixed; /* 画面に固定 */
+        top: 0;
+        right: -100%; /* 最初は画面の右外に隠す */
+        width: 50%; /* 画面の半分 */
+        height: 100vh; /* 画面いっぱいの高さ */
+        background-color: rgba(51, 51, 51, 0.95); /* 少し透かすとおしゃれ */
+        padding-top: 80px;
+        transition: right 0.4s ease; /* スライドのアニメーション */
+        z-index: 99;
+    }
+
+    /* JSで .active がついた時に右から 0 の位置へ戻す */
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+        text-align: center;
+    }
+}
+
+#bbs-form {
+display: flex;
+flex-direction: column;
+gap: 10px;
+margin-bottom: 20px;
+}
+
+#bbs-form input,
+#bbs-form textarea {
+padding: 10px;
+border-radius: 8px;
+border: 1px solid #ccc;
+}
+
+#bbs-form button {
+padding: 10px;
+background: #333;
+color: #fff;
+border: none;
+border-radius: 8px;
+cursor: pointer;
+}
+
+.post {
+border-bottom: 1px solid #ddd;
+padding: 10px 0;
+}
+
+/* ===== Theme Toggle Button ===== */
+
+#theme-toggle{
+    background:none;
+    border:none;
+    color:white;      /* ←変更 */
+    font-size:1.4rem;
+    cursor:pointer;
+    margin-left:15px;
+    padding:5px;
+    transition:.3s;
+}
+
+#theme-toggle:hover{
+    color:#ffd54f;
+    transform:rotate(20deg) scale(1.1);
+}
+
+/* ダークモード */
+
+body.dark-mode{
+    background:linear-gradient(135deg,#0f172a,#1e293b,#111827);
+    color:#f5f5f5;
+}
+
+body.dark-mode .navbar{
+    background:rgba(15,23,42,.85);
+    backdrop-filter:blur(10px);
+}
+
+body.dark-mode .logo,
+body.dark-mode h1,
+body.dark-mode h2{
+    color:#ffffff;
+}
+
+body.dark-mode .nav-links a{
+    color:#f5f5f5;
+}
+
+body.dark-mode .nav-links a:hover{
+    color:#60a5fa;
+}
+
+body.dark-mode .card{
+    background:rgba(255,255,255,.08);
+    color:#f5f5f5;
+    border:1px solid rgba(255,255,255,.08);
+}
+
+body.dark-mode .sns a{
+    background:#374151;
+    color:#fff;
+}
+
+body.dark-mode .sns a:hover{
+    background:#60a5fa;
+}
+
+body.dark-mode footer{
+    background:#0f172a;
+    color:#9ca3af;
+}
+
+body.dark-mode #theme-toggle{
+    color:#ffd54f;
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>大羽沢英和（ばさわ） | ポートフォリオ</title>
+<meta name="description" content="大羽沢英和のポートフォリオサイト">
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<link rel="icon" href="profile.png">
+</head>
+
+<body>
+
+<nav class="navbar">
+  <div class="logo">MyProfile</div>
+  <button id="theme-toggle" aria-label="テーマ切り替え" title="ライト/ダークモード">
+  <i class="fas fa-moon"></i>
+</button>
+
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#profile">Profile</a></li>
+    <li><a href="#hobby">Hobby</a></li>
+    <li><a href="#blog">Blog</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<header>
+  <img src="profile.png" class="avatar" alt="大羽沢英和のプロフィール写真">
+  <h1>大羽沢英和（ばさわ）</h1>
+  <p>Designer / Creator</p>
+</header>
+
+<section id="profile" class="fade">
+  <h2>Profile</h2>
+  <div class="card">
+    <p id="greeting">こんにちは！ご覧いただきありがとうございます。</p>
+    <p>大羽沢英和（ばさわ）です。</p>
+    <p>画像編集が好きです。</p>
+    <p>AI、プログラム言語の勉強をしています。</p>
+  </div>
+</section>
+
+<section id="hobby" class="fade">
+  <h2>Hobby</h2>
+  <div class="card">
+    <ul>
+      <li>写真撮影</li>
+      <li>プログラミング</li>
+      <li>AI</li>
+      <li>家庭菜園</li>
+      <li>ドローン</li>
+      <li>音楽</li>
+      <li>映画</li>
+    </ul>
+  </div>
+</section>
+
+<section id="blog" class="fade">
+  <h2>Blog</h2>
+  <div class="card">
+    <ul>
+      <li>
+        <a href="https://ameblo.jp/basawa916/" target="_blank" rel="noopener noreferrer">
+          Amebaブログを見る
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section id="contact" class="fade">
+  <h2>Contact</h2>
+
+  <div class="sns">
+    <a href="https://www.facebook.com/profile.php?id=100011247700794"
+       target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-facebook"></i>
+    </a>
+
+<a href="https://www.instagram.com/basawa0916/"
+   target="_blank" rel="noopener noreferrer">
+  <i class="fab fa-instagram"></i>
+</a>
+
+<a href="https://github.com/hidekazu-obasawa"
+   target="_blank" rel="noopener noreferrer">
+  <i class="fab fa-github"></i>
+</a>
+
+<a href="mailto:basawaworks@gmail.com">
+  <i class="fas fa-envelope"></i>
+</a>
+
+  </div>
+</section>
+
+<a href="#" class="back-to-top">
+  <i class="fas fa-arrow-up"></i>
+</a>
+
+<footer>
+  © <span id="year"></span> Basawa Portfolio
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
