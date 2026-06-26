@@ -19,7 +19,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 <body>
 
 <nav class="navbar">
-  <div class="logo">MyProfile</div>
+  <div class="logo">Basawa Portfolio</div>
   <button id="theme-toggle" aria-label="テーマ切り替え" title="ライト/ダークモード">
   <i class="fas fa-moon"></i>
 </button>
@@ -33,6 +33,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
   <ul class="nav-links" id="nav-links">
     <li><a href="#profile">Profile</a></li>
     <li><a href="#hobby">Hobby</a></li>
+    <li><a href="#program">Program</a></li>
     <li><a href="#blog">Blog</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -40,10 +41,16 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 
 <header>
   <img src="profile.png" class="avatar" alt="大羽沢英和のプロフィール写真">
-  <h1>大羽沢英和（ばさわ）</h1>
+  <h1>
+  <ruby>
+    大羽沢英和
+    <rt>ばさわ</rt>
+  </ruby>
+</h1>
   <p>Designer / Creator</p>
 </header>
 
+<main>
 <section id="profile" class="fade">
   <h2>Profile</h2>
   <div class="card">
@@ -66,6 +73,19 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
       <li>音楽</li>
       <li>映画</li>
     </ul>
+  </div>
+</section>
+
+<section id="program" class="fade">
+  <h2>Program</h2>
+
+  <div class="card">
+    <a class="program-button"
+       href="https://ss671926.stars.ne.jp/"
+       target="_blank"
+       rel="noopener noreferrer">
+       💻 プログラム集を見る
+    </a>
   </div>
 </section>
 
@@ -111,6 +131,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 <a href="#" class="back-to-top">
   <i class="fas fa-arrow-up"></i>
 </a>
+</main>
 
 <footer>
   © <span id="year"></span> Basawa Portfolio
